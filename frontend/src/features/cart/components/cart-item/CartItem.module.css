@@ -1,0 +1,80 @@
+.cartItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  align-items: flex-start; /* Keeps image at top */
+  border-bottom: 1px solid #eee;
+}
+
+.cartImage img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Takes up remaining space */
+  gap: 0.25rem;
+}
+
+.cartContent h2 {
+  font-size: 16px; /* Reduced font size */
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+.itemQtyPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.qtyBtn {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.qtyBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.qtyValue {
+  font-size: 14px;
+  text-align: center;
+  width: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.qtyValue::-webkit-inner-spin-button,
+.qtyValue::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.priceContainer h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}

@@ -1,0 +1,172 @@
+/* Container */
+.ordersContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Order card */
+.orderCard {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.orderCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.orderHeader h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222; /* darker to stand out */
+}
+
+.orderHeader p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Total & Status */
+.totalAmount {
+  font-weight: 700;
+  color: #1a73e8; /* blue for visibility */
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.orderStatus {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.orderStatus strong {
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  display: inline-block;
+}
+
+/* Status colors */
+.orderStatus strong.Pending {
+  background-color: #f0ad4e; /* yellow/orange */
+}
+
+.orderStatus strong.Processing {
+  background-color: #5bc0de; /* light blue */
+}
+
+.orderStatus strong.Shipped {
+  background-color: #0275d8; /* dark blue */
+}
+
+.orderStatus strong.Delivered {
+  background-color: #5cb85c; /* green */
+}
+
+.orderStatus strong.Cancelled {
+  background-color: #d9534f; /* red */
+}
+
+.orderStatus strong.Failed {
+  background-color: #c12e2a; /* dark red */
+}
+
+/* Items list */
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.item:hover {
+  background-color: #f9f9f9;
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemName {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.itemDetails p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Invoice link */
+.invoiceLink {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.invoiceLink:hover {
+  text-decoration: underline;
+  color: #0b5ed7;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+  .item {
+    gap: 20px;
+  }
+
+  .itemImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .itemName {
+    font-size: 16px;
+  }
+
+  .orderCard {
+    padding: 20px;
+  }
+}

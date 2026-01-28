@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #f8f9fc;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  background: #eef1ff;
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: #4f46e5; /* subtle accent */
+}
+
+.label {
+  font-size: 1rem;
+}

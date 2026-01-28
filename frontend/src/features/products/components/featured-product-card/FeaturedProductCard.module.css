@@ -1,0 +1,73 @@
+.featuredCard {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 1rem;
+  margin-block: .6rem;
+}
+.featuredCard img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* First <p> for quality */
+.featuredCard p:first-of-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  text-transform: uppercase;
+}
+
+/* Product name */
+.featuredCard h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+  line-height: 1.2;
+}
+
+/* Description */
+.featuredCard p:last-of-type {
+  font-size: 14px;
+  color: var(--light-gray);
+  line-height: 1.4;
+}
+
+/* Buttons section */
+.cardActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 650px) {
+  .featuredCard img {
+    height: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .featuredCard {
+    flex-direction: column;
+  }
+
+  .featuredCard img {
+    height: 300px;
+  }
+}

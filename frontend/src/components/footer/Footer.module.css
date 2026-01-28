@@ -1,0 +1,95 @@
+.footer {
+  background: #f9f9f9; /* light background */
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding-top: 3rem;
+}
+
+/* Top part with columns */
+.footerTop {
+  display: flex;
+  flex-wrap: wrap; /* allows columns to wrap on smaller screens */
+  gap: 2rem;       /* space between columns */
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Each column */
+.footerTop > div {
+  flex: 1 1 200px; /* flex-grow, flex-shrink, min-width */
+  min-width: 200px;
+}
+
+/* Column heading */
+.footerTop h2 {
+  font-size: 18px;
+  margin-bottom: 0.8rem;
+}
+
+/* List styling */
+.footerTop ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerTop li {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.footerTop li:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Footer bottom */
+.footerBottom {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  color: #777;
+}
+
+.footerBottom p {
+  margin: 0;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li a {
+  text-decoration: none;
+  color: #777;
+  transition: color 0.2s;
+}
+
+.footerLinks li a:hover {
+  color: #000; /* hover color */
+}
+
+/* Tablet & above */
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.7rem 5rem;
+  }
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+  }
+}

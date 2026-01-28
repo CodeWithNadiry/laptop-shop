@@ -1,0 +1,45 @@
+.productsList {
+  width: 100%;
+}
+
+/* GRID layout (default) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* SCROLL layout (mobile-first) */
+.scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+/* Each card snaps nicely */
+.scroll > * {
+  flex: 0 0 40%;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 695px) {
+  .scroll > * {
+    flex: 0 0 51%;
+  }
+}
+/* Tablet and above → switch scroll to grid */
+@media (min-width: 768px) {
+  .scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    overflow: visible;
+  }
+}
+
+@media (min-width: 770px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+}

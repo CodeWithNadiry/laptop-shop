@@ -1,0 +1,89 @@
+.hero {
+  height: 80vh;
+  position: relative;
+  width: 100%;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 0.7rem;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+}
+
+.prevBtn,
+.nextBtn {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: rgb(228, 225, 225);
+}
+
+.prevBtn svg,
+.nextBtn svg {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+
+  
+  .prevBtn,
+  .nextBtn {
+    padding: 8px;
+    background: var(--white);
+  }
+}
+
+@media (min-width: 990px) {
+  .hero {
+    height: 50vh;
+    background: #000;
+  }
+
+  .heroImg {
+  background-position: left top;
+}
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 60vh;
+  }
+  .heroImg {
+    background-position: right top;
+  }
+}
+
+@media (min-width: 1350px) {
+  .hero {
+    height: 70vh;
+  }
+
+}

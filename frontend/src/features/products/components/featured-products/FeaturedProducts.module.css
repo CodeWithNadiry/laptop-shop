@@ -1,0 +1,30 @@
+.featuredProducts {
+  width: 100%;
+  border-bottom: 1px solid rgba(150, 149, 149, 0.192);
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.featuredProducts h1 {
+  width: 100%;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  margin-block: 2rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .featuredProducts {
+    margin-top: 0rem;
+  }
+  .featuredProducts h1 {
+    font-size: 2rem;
+  }
+}

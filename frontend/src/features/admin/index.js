@@ -1,0 +1,7 @@
+export {default as AdminDashboard} from './pages/AdminDashboard'
+export {default as AddProduct} from './pages/add-product/AddProduct'
+export {default as EditProduct} from './pages/EditProduct'
+export {default as AdminProducts} from './pages/AdminProducts'
+export {default as AdminOrders} from './pages/AdminOrders'
+export {default as AdminUsers} from './pages/AdminUsers'
+export {default as AdminRevenue} from './pages/AdminRevenue'

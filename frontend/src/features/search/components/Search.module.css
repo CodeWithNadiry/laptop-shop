@@ -1,0 +1,64 @@
+.search {
+  width: 100%;
+  position: relative; /* Keep this so .products anchors to it */
+  display: flex;
+  flex-direction: column;
+}
+
+.searchInputBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px 45px 10px 15px; /* Space on right for the icon */
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Optional: for that Dell look */
+  background: var(--light-white);
+}
+
+.searchInputBtn button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* The Result Dropdown Container */
+.products {
+  position: absolute;
+  top: 100%; /* Sits exactly below the input */
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 999; /* Ensures it sits above other content */
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 100%; /* Let the parent container control the width */
+    max-width: 600px; /* Adjust based on your header layout */
+    margin: 0 auto;
+  }
+  
+  .products {
+    /* On Desktop, Dell's search usually goes full width of the screen 
+       or stays pinned to the search bar. To make it full width: */
+    position: fixed; 
+    left: 0;
+    right: 0;
+    top: 60px; /* Adjust this to match your Navbar height */
+    width: 100vw;
+  }
+}

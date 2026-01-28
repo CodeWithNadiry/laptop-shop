@@ -1,0 +1,229 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--dark-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  transition: height 0.25s ease;
+}
+
+.shrink .navTop {
+  height: auto;
+}
+
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.menuBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menuBtn svg {
+  color: #444444;
+  stroke-width: 0.2;
+}
+
+.topLeft a img {
+  height: 22px;
+}
+
+.searchDesktop {
+  display: none;
+}
+
+.userCartBtns,
+.adminBtns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userBtn,
+.cartBtn,
+.searchBtn,
+.adminBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.9rem;
+  color: #444444;
+  transition: color 0.3s ease;
+}
+
+.userBtn:hover,
+.cartBtn:hover,
+.adminBtn:hover,
+.searchBtn:hover {
+  color: #0176cf;
+}
+
+.btnText,
+.cartText {
+  display: none;
+}
+
+.userCartBtns svg,
+.adminBtns svg {
+  color: #444444;
+  font-size: 1.5rem;
+  stroke-width: 2.5;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  background: #f5494f;
+  color: #fff;
+  font-size: 0.7rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBottom {
+  width: 100%;
+}
+
+.navLinks {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--dark-white);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  color: #484857;
+  font-size: 14px;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+  margin-left: 20px;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 2px;
+  width: 0;
+  background-color: #0176cf;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 20%;
+}
+
+.navLinks a.active {
+  color: #0176cf;
+}
+
+@media (min-width: 768px) {
+  .navTop,
+  .shrink .navTop {
+    height: 100%;
+  }
+
+  .topLeft {
+    flex: 1;
+  }
+
+  .topLeft a img {
+    height: 27px;
+  }
+
+  .searchDesktop {
+    display: block;
+    flex: 1 1 auto;
+    margin-left: 1.5rem;
+    max-width: 470px;
+    min-width: 180px;
+  }
+
+  .userCartBtns,
+  .adminBtns {
+    gap: 2rem;
+  }
+
+  .btnText,
+  .cartText {
+    display: block;
+    font-size: 0.85rem;
+    color: #444;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  .navBottom {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    border-top: 1px solid rgb(189, 189, 189);
+    padding-top: 10px;
+  }
+
+  .navLinks a {
+    margin-left: 0px;
+  }
+  .navLinks a:hover::after {
+    width: 100%;
+  }
+  .searchBtn {
+    display: none;
+  }
+
+  /* Desktop scroll behavior */
+  .scrolled .menuBtn {
+    display: block;
+  }
+
+  .scrolled .navLinks {
+    display: none;
+  }
+}
+
+/* Show mobile nav when menuOpen */
+.menuOpen .navLinks {
+  display: flex;
+}

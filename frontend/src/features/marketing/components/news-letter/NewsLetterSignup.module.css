@@ -1,0 +1,103 @@
+.newsLetter {
+  background: var(--dark-blue);
+  color: white;
+  padding: 2.3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+  align-items: center;
+}
+
+/* Title */
+.newsLetter h1 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Description text */
+.newsLetter p {
+  font-size: 14px;
+  line-height: 1.5;
+  width: 270px;
+}
+
+/* Input + Button wrapper */
+.submitBtn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Email input */
+.submitBtn input {
+  width: 100%;
+  padding: 15px 50px 15px 15px; /* space for button */
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* Placeholder */
+.submitBtn input::placeholder {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Send button */
+.submitBtn button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  padding: 0 16px;
+  background: var(--light-yellow);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtn button span {
+  display: none;
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  font-weight: 800;
+}
+/* Hover effect */
+.submitBtn button:hover {
+  opacity: 0.9;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .newsLetter {
+    padding: 3rem 2rem;
+  }
+
+  .newsLetter h1 {
+    font-size: 27px;
+  }
+
+  .newsLetter p {
+    font-size: 19px;
+    width: 590px;
+  }
+
+  .submitBtn {
+    max-width: 350px;
+  }
+
+  .submitBtn button span {
+    display: inline;
+  }
+  .submitBtn button svg {
+    display: none;
+  }
+
+}
+

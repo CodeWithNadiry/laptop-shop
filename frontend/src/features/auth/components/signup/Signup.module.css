@@ -1,0 +1,86 @@
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.formGroup {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+
+/* Matching the blue tint from the screenshot for password fields */
+.passwordInput {
+  background-color: #eef3ff;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2e3552; /* Dell Navy */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #1a2036;
+}
+
+.error {
+  background-color: #fdf2f2;
+  color: #d32f2f;
+  padding: 12px;
+  border-left: 4px solid #d32f2f;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.success {
+  background-color: #f3faf7;
+  color: #2e7d32;
+  padding: 12px;
+  border-left: 4px solid #2e7d32;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loginLink {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}

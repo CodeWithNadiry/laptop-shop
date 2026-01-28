@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem 1.25rem;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 120px;
+  position: relative;
+}
+
+/* Different background colors for each card */
+.card:nth-child(1) {
+  background-color: #4f46e5; /* Blue - Total Products */
+}
+
+.card:nth-child(2) {
+  background-color: #10b981; /* Green - Total Orders */
+}
+
+.card:nth-child(3) {
+  background-color: #8b5cf6; /* Purple - Total Users */
+}
+
+.card:nth-child(4) {
+  background-color: #f59e0b; /* Orange - Total Revenue */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

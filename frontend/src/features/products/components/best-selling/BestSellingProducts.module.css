@@ -1,0 +1,36 @@
+.bestSellingWrapper {
+  border-bottom: 1px solid rgba(150, 149, 149, 0.192);
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.1rem;
+  margin-block: 1rem;
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.content a {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-inline: 3.7rem;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content a {
+    font-size: 18px;
+  }
+}

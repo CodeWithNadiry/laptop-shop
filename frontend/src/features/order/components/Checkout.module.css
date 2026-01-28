@@ -1,0 +1,133 @@
+/* Mobile-first styles */
+.checkoutContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.checkoutContainer h2,
+.checkoutContainer h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemName {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.itemQuantity,
+.itemPrice {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0 0 0;
+}
+
+.subtotal,
+.taxesNote {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.paymentOption {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.placeOrderBtn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.placeOrderBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.placeOrderBtn:hover:not(:disabled) {
+  background-color: #005bb5;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: green;
+}
+
+/* -------- Tablet/Desktop Styles -------- */
+@media (min-width: 768px) {
+  .checkoutContainer {
+    max-width: 600px;
+    padding: 30px;
+    margin-block: 4rem;
+  }
+
+  .cartItem {
+    padding: 15px 0;
+  }
+
+  .itemImage {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .itemName {
+    font-size: 16px;
+  }
+
+  .itemQuantity,
+  .itemPrice {
+    font-size: 15px;
+  }
+
+  .subtotal,
+  .taxesNote {
+    font-size: 16px;
+  }
+
+  .paymentOption {
+    font-size: 18px;
+  }
+
+  .placeOrderBtn {
+    font-size: 18px;
+    padding: 14px 25px;
+    width: auto;
+  }
+}

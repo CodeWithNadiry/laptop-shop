@@ -1,0 +1,81 @@
+/* Base Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+/* =====================
+   Variants
+===================== */
+
+/* Blue background → white on hover */
+.primary {
+  background: var(--dark-blue);
+  color: #fff;
+  border-color: var(--dark-blue);
+}
+
+.primary:hover {
+  background: var(--very-dark-blue);
+}
+
+/* White/transparent → blue on hover */
+.outline {
+  background: transparent;
+  color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+.outline:hover {
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+.purple {
+  background: var(--light-purple);
+  color: #fff;
+  border-color: var(--light-purple);
+}
+
+.purple:hover {
+  background: var(--dark-purple);
+}
+
+/* =====================
+   Sizes (Responsive)
+===================== */
+
+.sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.md {
+  padding: 0.3rem .7rem;
+  font-size: 0.9rem;
+}
+
+.lg {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+
+/* Mobile Optimization */
+@media (min-width: 768px) {
+
+  .sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+}
+
+  .lg {
+    padding: .87rem 1.7rem;
+  }
+}

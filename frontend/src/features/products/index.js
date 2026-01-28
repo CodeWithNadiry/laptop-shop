@@ -1,0 +1,6 @@
+export {default as BestSellingProducts} from './components/best-selling/BestSellingProducts'
+export {default as FeaturedProductCard} from './components/featured-product-card/FeaturedProductCard'
+export {default as FeaturedProducts} from './components/featured-products/FeaturedProducts'
+export {default as ProductCard} from './components/product-card/ProductCard'
+export {default as ProductsList} from './components/products-list/ProductsList'
+export {default as SpecialProduct} from './components/special-product/SpecialProduct'
