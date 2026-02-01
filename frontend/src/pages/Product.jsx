@@ -85,7 +85,7 @@ const Product = ({ product, isModal }) => {
           <div className={styles.imageWrapper}>
             <img
               className={styles.mainImage}
-              src={`https://backend-production-fccb.up.railway.app/${image}`}
+              src={`https://laptop-shop-production.up.railway.app//${image}`}
               alt={name}
             />
           </div>

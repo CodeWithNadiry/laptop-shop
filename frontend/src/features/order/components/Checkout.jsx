@@ -19,7 +19,7 @@ const Checkout = () => {
 
     try {
       const res = await fetch(
-        "https://backend-production-fccb.up.railway.app/orders",
+        "https://laptop-shop-production.up.railway.app//orders",
         {
           method: "POST",
           headers: {
@@ -55,7 +55,7 @@ const Checkout = () => {
           <img
             src={
               item.image
-                ? `https://backend-production-fccb.up.railway.app/${item.image}`
+                ? `https://laptop-shop-production.up.railway.app//${item.image}`
                 : "/placeholder.png"
             }
             alt={item.name}

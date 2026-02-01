@@ -11,7 +11,7 @@ const AdminOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch("https://backend-production-fccb.up.railway.app/admin/orders", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app//admin/orders", {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -29,7 +29,7 @@ const AdminOrders = () => {
 
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      await fetch(`https://backend-production-fccb.up.railway.app/admin/orders/${orderId}/status`, {
+      await fetch(`https://laptop-shop-production.up.railway.app//admin/orders/${orderId}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const AdminOrders = () => {
 
                 <td data-label="Preview">
                   <img
-                    src={`https://backend-production-fccb.up.railway.app/${firstItem?.image}`}
+                    src={`https://laptop-shop-production.up.railway.app//${firstItem?.image}`}
                     alt={firstItem?.name}
                     style={{
                       width: "40px",

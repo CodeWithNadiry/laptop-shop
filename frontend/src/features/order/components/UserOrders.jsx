@@ -13,7 +13,7 @@ const UserOrders = () => {
     const fetchOrders = async () => {
       setIsLoading(true);
       try {
-        const res = await fetch("https://backend-production-fccb.up.railway.app/orders", {
+        const res = await fetch("https://laptop-shop-production.up.railway.app//orders", {
           headers: {
             Authorization: "Bearer " + token,
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const UserOrders = () => {
   const downloadInvoice = async (orderId) => {
     try {
       const res = await fetch(
-        `https://backend-production-fccb.up.railway.app/orders/${orderId}/invoice`,
+        `https://laptop-shop-production.up.railway.app//orders/${orderId}/invoice`,
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -85,7 +85,7 @@ const UserOrders = () => {
                 <img
                   src={
                     item.image
-                      ? `https://backend-production-fccb.up.railway.app/${item.image}`
+                      ? `https://laptop-shop-production.up.railway.app//${item.image}`
                       : "/placeholder.png"
                   } // item image
                   alt={item.name}
