@@ -36,7 +36,7 @@ app.use(multer({ storage: fileStorage, fileFilter }).single("image"));
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(cors({
-  origin: FRONTEND_URL,
+  origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
