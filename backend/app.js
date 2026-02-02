@@ -37,10 +37,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(cors({
   origin: process.env.FRONTEND_URL,
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+}))
 
 const adminRoutes = require("./routes/admin");
 const authRoutes = require("./routes/auth");
