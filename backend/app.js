@@ -35,9 +35,7 @@ app.use(express.json());
 app.use(multer({ storage: fileStorage, fileFilter }).single("image"));
 app.use("/images", express.static(path.join(__dirname, "images")));
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL,
-}))
+app.use(cors());
 
 const adminRoutes = require("./routes/admin");
 const authRoutes = require("./routes/auth");
