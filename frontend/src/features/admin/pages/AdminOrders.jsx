@@ -11,7 +11,7 @@ const AdminOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch("https://laptop-shop-production.up.railway.appadmin/orders", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app/admin/orders", {
         headers: {
           Authorization: "Bearer " + token,
         },

@@ -73,7 +73,7 @@ const CartContextProvider = ({ children }) => {
       return;
     }
 
-    fetch("https://laptop-shop-production.up.railway.appcart", {
+    fetch("https://laptop-shop-production.up.railway.app/cart", {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -102,7 +102,7 @@ const CartContextProvider = ({ children }) => {
     // Optimistic update
     dispatchCartAction({ type: "ADD_TO_CART", item:{_id: item._id, name: item.name, price: item.price, image: item.image, quantity: 1} });
 
-    fetch("https://laptop-shop-production.up.railway.appcart", {
+    fetch("https://laptop-shop-production.up.railway.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -119,7 +119,7 @@ const CartContextProvider = ({ children }) => {
   function removeItem(id) {
     dispatchCartAction({ type: "REMOVE_FROM_CART", id });
 
-    fetch(`https://laptop-shop-production.up.railway.appcart/${id}`, {
+    fetch(`https://laptop-shop-production.up.railway.app/cart/${id}`, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token },
     });
@@ -128,7 +128,7 @@ const CartContextProvider = ({ children }) => {
   function clearCart() {
     dispatchCartAction({ type: "CLEAR_CART" });
 
-    fetch("https://laptop-shop-production.up.railway.appcart/clear", {
+    fetch("https://laptop-shop-production.up.railway.app/cart/clear", {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token },
     });
@@ -138,7 +138,7 @@ const CartContextProvider = ({ children }) => {
     dispatchCartAction({ type: "UPDATE_QUANTITY", id, quantity });
 
     // Optional: sync with backend
-    fetch(`https://laptop-shop-production.up.railway.appcart/update`, {
+    fetch(`https://laptop-shop-production.up.railway.app/cart/update`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
