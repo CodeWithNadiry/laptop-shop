@@ -110,7 +110,7 @@ exports.requestPasswordReset = async (req, res, next) => {
     user.resetTokenExpiration = Date.now() + 3600000; // 1hr
     await user.save();
 
-    const link = `https://laptop-shop-production.up.railway.appauth/reset/${token}`;
+    const link = `${process.env.FRONTEND_URL}/auth/reset/${token}`;
     await sendEmail(
       user.email,
       "Password Reset Request",
