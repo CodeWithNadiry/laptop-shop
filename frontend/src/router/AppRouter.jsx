@@ -5,7 +5,7 @@ import AdminLayout from "../features/admin/pages/AdminLayout";
 import AdminRoute from "./AdminRoute";
 
 // Public pages
-import { Home, NotFound, Product, Collection, QuickView } from "../pages";
+import { Home, NotFound, Product, Collection } from "../pages";
 // Auth
 import { Login, Signup } from "../features/auth";
 

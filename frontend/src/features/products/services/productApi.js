@@ -1,4 +1,4 @@
-const BASE_URL = "/products";
+const BASE_URL = "https://laptop-shop-production.up.railway.app/products";
 
 const handleResponse = async (res) => {
   const data = await res.json();

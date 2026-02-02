@@ -9,7 +9,7 @@ const AdminRevenue = () => {
 
   useEffect(() => {
     async function fetchRevenue() {
-      const res = await fetch("https://laptop-shop-production.up.railway.app//admin/orders", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app/admin/orders", {
         headers: { Authorization: "Bearer " + token }
       });
 

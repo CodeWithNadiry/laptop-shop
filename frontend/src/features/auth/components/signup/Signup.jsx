@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await fetch("https://laptop-shop-production.up.railway.app//auth/signup", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -21,7 +21,7 @@ const EditProduct = () => {
     const fetchProduct = async () => {
       try {
         const res = await fetch(
-          `https://laptop-shop-production.up.railway.app//admin/products/${prodId}`,
+          `https://laptop-shop-production.up.railway.app/admin/products/${prodId}`,
           { headers: { Authorization: "Bearer " + token } }
         );
         const data = await res.json();
@@ -33,7 +33,7 @@ const EditProduct = () => {
         // Initially show current product image
         setImagePreview(
           data.product.image && data.product.image.trim() !== ""
-            ? `https://laptop-shop-production.up.railway.app//${data.product.image}`
+            ? `https://laptop-shop-production.up.railway.app/${data.product.image}`
             : null
         );
       } catch (err) {
@@ -57,7 +57,7 @@ const EditProduct = () => {
 
     try {
       const res = await fetch(
-        `https://laptop-shop-production.up.railway.app//admin/products/${prodId}`,
+        `https://laptop-shop-production.up.railway.app/admin/products/${prodId}`,
         {
           method: "PUT",
           headers: { Authorization: "Bearer " + token },

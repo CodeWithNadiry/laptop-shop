@@ -11,7 +11,7 @@ const ProductContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_BASE = "https://laptop-shop-production.up.railway.app/";
+  const API_BASE = "https://laptop-shop-production.up.railway.app";
 
   // All Products
   const fetchAllProducts = async () => {

@@ -9,7 +9,7 @@ const ResetRequest = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://laptop-shop-production.up.railway.app//auth/reset-password", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app/auth/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

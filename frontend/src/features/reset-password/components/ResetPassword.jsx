@@ -11,7 +11,7 @@ function ResetPassword() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const res = await fetch(`https://laptop-shop-production.up.railway.app//auth/reset-password/${token}`, {
+      const res = await fetch(`https://laptop-shop-production.up.railway.app/auth/reset-password/${token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ newPassword }),

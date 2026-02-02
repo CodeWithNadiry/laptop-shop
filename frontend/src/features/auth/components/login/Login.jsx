@@ -23,7 +23,7 @@ const Login = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const res = await fetch("https://laptop-shop-production.up.railway.app//auth/login", {
+      const res = await fetch("https://laptop-shop-production.up.railway.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userInput),

@@ -31,7 +31,7 @@ const CartItem = ({ item }) => {
     <div className={styles.cartItem}>
       <div className={styles.cartImage}>
         <img
-          src={image ? `https://laptop-shop-production.up.railway.app//${image}` : "/placeholder.png"}
+          src={image ? `https://laptop-shop-production.up.railway.app/${image}` : "/placeholder.png"}
           alt={name}
         />
       </div>

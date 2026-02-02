@@ -6,7 +6,7 @@ const FeaturedProductCard = ({
   return (
     <div className={styles.featuredCard}>
       <img
-        src={image ? `https://laptop-shop-production.up.railway.app//${image}` : "/placeholder.png"}
+        src={image ? `https://laptop-shop-production.up.railway.app/${image}` : "/placeholder.png"}
         alt="featured-product"
       />
       <div className={styles.cardContent}>

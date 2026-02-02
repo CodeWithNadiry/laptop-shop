@@ -77,7 +77,7 @@ const ProductCard = ({ data, onAddToCart }) => {
 
     try {
       const res = await fetch(
-        `https://laptop-shop-production.up.railway.app//admin/products/${_id}`,
+        `https://laptop-shop-production.up.railway.app/admin/products/${_id}`,
         {
           method: "DELETE",
           headers: { Authorization: "Bearer " + localStorage.getItem("token") },
@@ -131,7 +131,7 @@ const ProductCard = ({ data, onAddToCart }) => {
           <img
             src={
               image
-                ? `https://laptop-shop-production.up.railway.app//${image}`
+                ? `https://laptop-shop-production.up.railway.app/${image}`
                 : "/placeholder.png"
             }
             alt={name}

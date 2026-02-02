@@ -17,7 +17,7 @@ const UserProfile = () => {
       if (!token || !userId) return;
 
       try {
-        const res = await fetch(`https://laptop-shop-production.up.railway.app//auth/users/${userId}`, {
+        const res = await fetch(`https://laptop-shop-production.up.railway.app/auth/users/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -35,7 +35,7 @@ const UserProfile = () => {
 
   async function handleUpdateName() {
     try {
-      const res = await fetch(`https://laptop-shop-production.up.railway.app//auth/users/${userId}`, {
+      const res = await fetch(`https://laptop-shop-production.up.railway.app/auth/users/${userId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const UserProfile = () => {
 
   async function requestPasswordReset() {
     try {
-      const res = await fetch(`https://laptop-shop-production.up.railway.app//auth/reset-password`, {
+      const res = await fetch(`https://laptop-shop-production.up.railway.app/auth/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: user.email }),
@@ -71,7 +71,7 @@ const UserProfile = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`https://laptop-shop-production.up.railway.app//auth/users/${userId}`, {
+      const res = await fetch(`https://laptop-shop-production.up.railway.app/auth/users/${userId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
